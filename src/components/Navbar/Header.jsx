@@ -90,7 +90,20 @@ const Header = () => {
       )}
       onChange={handleProductSelection}
     /> */}
-      <button className='btn bg-orange hover:bg-green '><SearchIcon   className=''/></button>
+      {/* <button className='btn bg-orange hover:bg-green '><SearchIcon   className=''/></button> */}
+      <label className="input input-bordered flex items-center gap-2">
+  <input type="text" className="grow" placeholder="Search" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    className="h-4 w-4 opacity-70">
+    <path
+      fillRule="evenodd"
+      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+      clipRule="evenodd" />
+  </svg>
+</label>
       
      </div>
       <List>
@@ -316,9 +329,50 @@ const Header = () => {
       )}
       onChange={handleProductSelection}
     /> */}
-        <button className="btn bg-orange hover:bg-green md:px-5 ">
+        {/* <button className="btn bg-orange hover:bg-green md:px-5 ">
           <SearchIcon className="" />
+        </button> */}
+        {/* <label className="input input-bordered flex items-center gap-2">
+  <input type="text" className="grow" placeholder="Search" />
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 16 16"
+    fill="currentColor"
+    className="h-4 w-4 opacity-70">
+    <path
+      fillRule="evenodd"
+      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+      clipRule="evenodd" />
+  </svg>
+</label> */}
+
+<div className="relative w-full max-w-3xl">
+      <label className="relative flex w-full items-center">
+        <input
+          type="text"
+          placeholder="Search products..."
+          className="w-full rounded-full outline-4 border-warning border border-gray-200 bg-white px-4 py-2 pr-12 text-sm focus:border-blue focus:outline-none focus:ring-2 focus:ring-warning/20"
+        />
+        <button 
+          type="submit" 
+          className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-warning px-4 text-white hover:bg-warning/90 focus:outline-none focus:ring-2 focus:ring-warning/20"
+        >
+          <SearchIcon className="text-black" />
+          {/* <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 16 16"
+            fill="currentColor"
+            className="h-4 w-4 opacity-90"
+          >
+            <path
+              fillRule="evenodd"
+              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
+              clipRule="evenodd"
+            />
+          </svg> */}
         </button>
+      </label>
+    </div>
         <div className="flex justify-end items-center">
           <Link href='/cart'><div className="hidden lg:inline mr-[-10px] ml-1">
             <div>
