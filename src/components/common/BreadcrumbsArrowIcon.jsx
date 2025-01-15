@@ -1,0 +1,3 @@
+export const BreadcrumbsArrowIcon = () => {
+    return (<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M4.85 2.65C4.65 2.45 4.35 2.45 4.15 2.65C3.95 2.85 3.95 3.15 4.15 3.35L6.8 6L4.15 8.65C4.05 8.75 4 8.85 4 9C4 9.15 4.05 9.25 4.15 9.35C4.25 9.45 4.35 9.5 4.5 9.5C4.65 9.5 4.75 9.45 4.85 9.35L7.85 6.35C7.95 6.25 8 6.15 8 6C8 5.85 7.95 5.75 7.85 5.65L4.85 2.65Z" fill="black" fill-opacity="0.24"/></svg> );
+};

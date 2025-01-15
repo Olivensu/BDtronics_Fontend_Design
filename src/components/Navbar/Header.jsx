@@ -59,7 +59,7 @@ const Header = () => {
   };
 
   const list = (anchor) => (
-    <Box
+    <div
       sx={{ width: anchor === 'top' || anchor === 'bottom' ? 'auto' : 250 }}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -91,22 +91,10 @@ const Header = () => {
       onChange={handleProductSelection}
     /> */}
       {/* <button className='btn bg-orange hover:bg-green '><SearchIcon   className=''/></button> */}
-      <label className="input input-bordered flex items-center gap-2">
-  <input type="text" className="grow" placeholder="Search" />
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    fill="currentColor"
-    className="h-4 w-4 opacity-70">
-    <path
-      fillRule="evenodd"
-      d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-      clipRule="evenodd" />
-  </svg>
-</label>
+      <div className='h-[80px] bg-[#FCB800]'>Shop By Categories</div>
       
      </div>
-      <List>
+      {/* <List>
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
@@ -117,9 +105,9 @@ const Header = () => {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
       <div className='mt-5'></div>
-      <Divider />
+      
       <ul className=" ml-[-9px] w-56 mt-2 py-3 bg-white  z-50 cursor-pointer">
                     <li  className = 'py-3 my-1 ml-6 '>
                       <Link  href={`/categories/mobile-and-laptops`}>
@@ -232,7 +220,7 @@ const Header = () => {
                       </Link>
                     </li>
                   </ul>
-    </Box>
+    </div>
   );
   
   const handleProductSelection = (event, selectedProduct) => {
@@ -392,6 +380,48 @@ const Header = () => {
             </Link>
           </div></Link>
           {/* <Divider sx={{ height: 28, m: 1 }} orientation="vertical" /> */}
+          <IconButton color="primary" sx={{ p: "" }} aria-label="directions">
+              <ul className="menu">
+                <li>
+                  <details>
+                    <summary>
+                      <AccountCircleIcon style={{ fontSize: "2rem" }} />
+                    </summary>
+                    <div className="absolute shadow-orange shadow-2xl bg-gray-light text-black p-2 rounded-xl ml-[-150px] w-64 mt-2   z-50">
+                      <li>
+                        <p>
+                          <AccountCircleIcon />
+                          
+                        </p>
+                      </li>
+                      
+                      <li className="mt-2">
+                        <Link href="/sign-in">Sign In</Link>
+                      </li>
+                      <li>
+                        <Link href='/register'>
+                          <div className="">
+                            <div>
+                              Create an Account
+                            </div>
+                            <Link href="cart-item">
+                              <p className="text-xs inline absolute mt-[-50px] ml-24 bg-blue px-1 rounded-full">
+                               
+                              </p>
+                            </Link>
+                          </div>
+                        </Link>
+                      </li>
+                      {/* <button
+                        className="btn btn-warning w-full mt-3"
+                      >
+                        Log out
+                      </button> */}
+                    </div>
+                  </details>
+                </li>
+              </ul>
+            </IconButton>
          
         </div>
       </div>
@@ -540,14 +570,14 @@ const Header = () => {
             </ul>
             <div className="flex w-full justify-between item-center lg:hidden">
               <ul className="menu">
-                <Link  href="/shop">
+                <Link  href="/products">
                   <li>
                     <p className='p-0'>
                       <StorefrontIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
                       ></StorefrontIcon>{" "}
-                      Shop
+                      Products
                     </p>
                   </li>
                 </Link>
@@ -592,14 +622,14 @@ const Header = () => {
                 </ul>
               </Link>
               <ul className="menu ml-3">
-                <Link  href="/shop">
+                <Link  href="/products">
                   <li>
                     <p>
                       <StorefrontIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
                       ></StorefrontIcon>{" "}
-                      Shop
+                      Products
                     </p>
                   </li>
                 </Link>
