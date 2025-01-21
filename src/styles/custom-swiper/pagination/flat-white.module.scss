@@ -1,0 +1,33 @@
+.flat_white {
+    :global {
+        .swiper-pagination {
+            display: flex;
+            justify-content: center;
+            bottom: 15px !important;
+
+            .swiper-pagination-bullet {
+                height: 10px;
+                width: 32px;
+                background-color: transparent;
+                border-radius: 40px;
+
+                &:only-child {
+                    display: inline-block !important;
+                }
+
+                &::before {
+                    content: "";
+                    background-color: #ffffff;
+                    width: 32px;
+                    height: 3px;
+                    border-radius: 40px;
+                    display: block !important;
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+
+            }
+        }
+    }
+}

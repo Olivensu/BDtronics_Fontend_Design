@@ -13,6 +13,7 @@ export default function Home() {
       <AllBrand></AllBrand>
       <PopularProduct></PopularProduct>
       <Reviews></Reviews>
+      
     </div>
   );
 }

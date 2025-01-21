@@ -1,0 +1,45 @@
+.home-whats-new-section {
+  @media (max-width: 500px) {
+    padding: 0 8px;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+
+input[aria-invalid="true"] {
+  background: #ffb4b4 url(https://cdn01.grameenphone.com/sites/all/themes/gprev_eighteen/images/icon_warning.png) no-repeat center right 15px
+}
+
+textarea[aria-invalid="true"] {
+  background: #ffb4b4 url(https://cdn01.grameenphone.com/sites/all/themes/gprev_eighteen/images/icon_warning.png) no-repeat center right 15px
+}
+
+.terms-and-condition-modal-checkout-page {
+  @media (max-width: "380px") {
+    max-width: 330px !important;
+  }
+}
+
+.swiper {
+  .mobile-image {
+    display: none;
+  }
+
+  .desktop-image {
+    display: block;
+  }
+
+  @media (max-width: '767px') {
+    .mobile-image {
+      display: block;
+    }
+
+    .desktop-image {
+      display: none;
+    }
+  }
+}

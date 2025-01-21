@@ -1,0 +1,27 @@
+.roundWhiteBg {
+    :global {
+        .swiper-pagination-bullet {
+            background-color: #fff;
+            border: 1px solid #fff;
+            width: 8px;
+            height: 8px;
+            margin-right: 12px !important;
+            margin-left: 0px !important;
+            opacity: 0.4;
+
+            @media (max-width: 767px) {
+                background-color: #0078cf;
+                border: 1px solid #0078cf;
+            }
+        }
+
+        .swiper-pagination-bullet-active {
+            background-color: #fff;
+            opacity: 1;
+
+            @media (max-width: 767px) {
+                background-color: #0078cf;
+            }
+        }
+    }
+}

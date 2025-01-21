@@ -1,0 +1,9 @@
+.onlyChildShow {
+    :global {
+        .swiper-pagination-bullet {
+            &:only-child {
+                display: inline-block !important;
+            }
+        }
+    }
+}

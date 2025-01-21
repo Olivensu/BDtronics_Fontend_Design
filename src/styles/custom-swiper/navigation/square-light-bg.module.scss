@@ -1,0 +1,52 @@
+.squareLightBg {
+    :global {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 24px;
+            height: 24px;
+            background-color: rgba(0, 0, 0, 0.25);
+
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+            transform: translateY(50%);
+        }
+
+        .swiper-button-prev {
+            border-radius: 0 3px 3px 0;
+
+            &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                z-index: 12;
+                display: inline-block;
+                background-image: url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%2212%22%20viewBox%3D%220%200%208%2012%22%20fill%3D%22%23ffffff%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M5.91683%2011.5833C6.25016%2011.9166%206.75016%2011.9166%207.0835%2011.5833C7.41683%2011.25%207.41683%2010.75%207.0835%2010.4166L2.66683%205.99998L7.0835%201.58331C7.25016%201.41665%207.3335%201.24998%207.3335%200.999978C7.3335%200.749978%207.25016%200.583311%207.08349%200.416644C6.91683%200.249978%206.75016%200.166645%206.50016%200.166645C6.25016%200.166645%206.0835%200.249978%205.91683%200.416644L0.916829%205.41665C0.750162%205.58331%200.666829%205.74998%200.666829%205.99998C0.666829%206.24998%200.750162%206.41665%200.916829%206.58331L5.91683%2011.5833Z%22%20fill%3D%22%23fffff%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: unset;
+                transition: unset;
+                vertical-align: top;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .swiper-button-next {
+            border-radius: 3px 0 0 3px;
+
+            &::after {
+                content: '';
+                width: 24px;
+                height: 24px;
+                position: absolute;
+                z-index: 12;
+                display: inline-block;
+                background-image: url('data:image/svg+xml,%3Csvg%20width%3D%228%22%20height%3D%2212%22%20viewBox%3D%220%200%208%2012%22%20fill%3D%22%23ffffff%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M2.08317%200.416687C1.74984%200.0833537%201.24984%200.0833537%200.916504%200.416687C0.583171%200.75002%200.583171%201.25002%200.916504%201.58335L5.33317%206.00002L0.916504%2010.4167C0.749837%2010.5834%200.666504%2010.75%200.666504%2011C0.666504%2011.25%200.749837%2011.4167%200.916504%2011.5834C1.08317%2011.75%201.24984%2011.8334%201.49984%2011.8334C1.74984%2011.8334%201.9165%2011.75%202.08317%2011.5834L7.08317%206.58335C7.24984%206.41669%207.33317%206.25002%207.33317%206.00002C7.33317%205.75002%207.24984%205.58335%207.08317%205.41669L2.08317%200.416687Z%22%20fill%3D%22%23ffffff%22%2F%3E%0A%3C%2Fsvg%3E');
+                background-size: unset;
+                transition: unset;
+                vertical-align: top;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}

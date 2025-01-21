@@ -1,0 +1,88 @@
+.custom_select {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+
+    :global {
+        .grow-select {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+            cursor: pointer;
+            height: 48px;
+            border-radius: 5px;
+        }
+
+        .grow-title {
+            position: relative;
+            font-size: 16px;
+            padding-left: 16px;
+        }
+
+        .grow-options {
+            cursor: pointer;
+            position: absolute;
+            background-color: white;
+            top: 100%;
+            left: 0;
+            right: 0;
+            border-radius: 7px;
+            box-shadow: 0 1px 10px rgb(0 0 0 / 20%);
+            z-index: 1;
+        }
+
+        .grow-option {
+            padding: 5px 0px 5px 20px;
+        }
+
+        .grow-option:hover {
+            background-color: #F5F5F5;
+        }
+
+        .postal-select {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #D6D6D6;
+            height: 48px;
+            border-radius: 7px;
+
+        }
+
+        .postal-options {
+            cursor: pointer;
+            position: absolute;
+            background-color: #fdfcfc;
+            border: 1px solid gray;
+            top: 100%;
+            left: 0;
+            right: 0;
+            z-index: 1;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .postal-scrollbar {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .postal-option {
+            padding: 0px 0px 0px 20px;
+        }
+
+        .postal-option:hover {
+            color: #fff;
+            background-color: rgb(36, 142, 250);
+        }
+
+        .key-down-hover {
+            color: #fff;
+            background-color: rgb(36, 142, 250);
+        }
+    }
+}

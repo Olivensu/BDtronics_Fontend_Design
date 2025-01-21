@@ -1,0 +1,114 @@
+.roundWhiteBg {
+    :global {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 32px;
+            height: 32px;
+            background-color: #ffffff;
+            border-radius: 100%;
+            box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25);
+        }
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                content: '';
+                width: 32px;
+                height: 32px;
+                position: absolute;
+                z-index: 12;
+                display: inline-block;
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.08366 4.41675C7.75033 4.08341 7.25033 4.08341 6.91699 4.41675C6.58366 4.75008 6.58366 5.25008 6.91699 5.58341L11.3337 10.0001L6.91699 14.4167C6.75033 14.5834 6.66699 14.7501 6.66699 15.0001C6.66699 15.2501 6.75033 15.4167 6.91699 15.5834C7.08366 15.7501 7.25033 15.8334 7.50033 15.8334C7.75033 15.8334 7.91699 15.7501 8.08366 15.5834L13.0837 10.5834C13.2503 10.4167 13.3337 10.2501 13.3337 10.0001C13.3337 9.75008 13.2503 9.58342 13.0837 9.41675L8.08366 4.41675Z' fill='black'/%3E%3C/svg%3E%0A");
+                background-size: unset;
+                transition: unset;
+                vertical-align: top;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+
+        .swiper-button-prev {
+            &::after {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+
+    }
+}
+
+.roundWhiteBgBlueArrow {
+    :global {
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            &::after {
+                background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='8' height='12' viewBox='0 0 8 12' fill='none'%3e%3cpath d='M2.08317 0.416626C1.74984 0.0832926 1.24984 0.0832926 0.916504 0.416626C0.583171 0.749959 0.583171 1.24996 0.916504 1.58329L5.33317 5.99996L0.916504 10.4166C0.749837 10.5833 0.666504 10.75 0.666504 11C0.666504 11.25 0.749837 11.4166 0.916504 11.5833C1.08317 11.75 1.24984 11.8333 1.49984 11.8333C1.74984 11.8333 1.9165 11.75 2.08317 11.5833L7.08317 6.58329C7.24984 6.41663 7.33317 6.24996 7.33317 5.99996C7.33317 5.74996 7.24984 5.58329 7.08317 5.41663L2.08317 0.416626Z' fill='%23007AD0'/%3e%3c/svg%3e") !important;
+            }
+        }
+
+        .swiper-button-prev {
+            &::after {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+}
+
+.roundWhiteBgSmall {
+
+    :global {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 24px;
+            height: 24px;
+            top: 64%;
+
+            &::after {
+                width: 24px;
+                height: 24px;
+            }
+        }
+
+    }
+}
+
+.roundWhiteBgBig {
+
+    :global {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            width: 56px;
+            height: 56px;
+        }
+
+    }
+}
+
+.roundBlackBg {
+    :global {
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            background-color: rgba(0, 0, 0, 0.32);
+
+            &::after {
+                background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.08317 4.41675C7.74984 4.08341 7.24984 4.08341 6.9165 4.41675C6.58317 4.75008 6.58317 5.25008 6.9165 5.58341L11.3332 10.0001L6.9165 14.4167C6.74984 14.5834 6.6665 14.7501 6.6665 15.0001C6.6665 15.2501 6.74984 15.4167 6.9165 15.5834C7.08317 15.7501 7.24984 15.8334 7.49984 15.8334C7.74984 15.8334 7.9165 15.7501 8.08317 15.5834L13.0832 10.5834C13.2498 10.4167 13.3332 10.2501 13.3332 10.0001C13.3332 9.75008 13.2498 9.58342 13.0832 9.41675L8.08317 4.41675Z' fill='white'/%3E%3C/svg%3E%0A");
+            }
+        }
+
+        .swiper-button-prev {
+            &::after {
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    }
+}

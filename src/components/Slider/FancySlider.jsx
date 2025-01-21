@@ -3,13 +3,15 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import {
+import SwiperCore, {
   Autoplay,
   Pagination,
   Navigation,
   Mousewheel,
   Keyboard,
-} from "swiper/modules";
+} from "swiper";
+
+SwiperCore.use([Autoplay, Pagination, Navigation, Mousewheel, Keyboard]);
 
 const FancySlider = () => {
   return (
@@ -28,20 +30,19 @@ const FancySlider = () => {
         navigation={true}
         mousewheel={true}
         keyboard={true}
-        modules={[Autoplay, Pagination, Navigation, Mousewheel, Keyboard]}
         className="mySwiper w-full shadow-2xl"
       >
         <SwiperSlide>
           <img className="w-full" src="/img/flash-sale/11.webp" alt="Slide 1" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 1" />
+          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 2" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/13.webp" alt="Slide 1" />
+          <img className="w-full" src="/img/flash-sale/13.webp" alt="Slide 3" />
         </SwiperSlide>
         <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 1" />
+          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 4" />
         </SwiperSlide>
       </Swiper>
     </div>

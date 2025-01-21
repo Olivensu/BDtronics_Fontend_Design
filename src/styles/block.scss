@@ -1,0 +1,15 @@
+.show-dropdown {
+  &:hover {
+    &~.desktop-dropdown {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.desktop-dropdown {
+  &:hover {
+    visibility: visible;
+    opacity: 1;
+  }
+}

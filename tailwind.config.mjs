@@ -13,7 +13,7 @@ export default {
       xl: '1290px',
     },
     colors: {
-      'blue': '#1fb6ff',
+      'blue': '#00f0ff',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'orange': '#ED6C02',

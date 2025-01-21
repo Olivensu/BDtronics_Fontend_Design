@@ -1,0 +1,84 @@
+body {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+*:focus {
+  box-shadow: none !important;
+}
+
+@font-face {
+  font-family: 'Telenor';
+  src: url('../public/fonts/Telenor-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telenor';
+  src: url('../public/fonts/Telenor.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telenor';
+  src: url('../public/fonts/Telenor-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Telenor';
+  src: url('../public/fonts/Telenor-Bold.woff2') format('woff2');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Noto Sans Bengali';
+  src: url('../public/fonts/Noto_Sans_Bengali.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Sans Bengali';
+  src: url('../public/fonts/Noto_Sans_Bengali_Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../public/fonts/sourcesanspro-light-webfont.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Source Sans Pro';
+  src: url('../public/fonts/sourcesanspro-regular-webfont.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.source-sans-pro {
+  font-family: "Source Sans Pro", "Telenor", "Helvetica Neue", Helvetica, Arial, Noto Sans Bengali, sans-serif !important;
+}
+
+.sim-service-table table td {
+  white-space: nowrap !important;
+}
+
+.sim-service-table table th {
+  white-space: nowrap !important;
+}
+
+.dynamic-page-bread-crumb ol {
+  flex-wrap: wrap;
+}

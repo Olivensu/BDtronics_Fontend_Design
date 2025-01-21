@@ -1,0 +1,47 @@
+.common_dynamic_page_design {
+    :global {
+
+        .blance-transfer-vas-dynamic-page {
+            font-weight: 500;
+            font-size: 30px !important;
+            line-height: 42px;
+
+            @media (max-width: 767px) {
+                font-size: 22px !important;
+                line-height: 30px;
+            }
+        }
+
+        .grameenphone-accelerator-page {
+            .revenue-section-blocks {
+                max-width: 846px;
+                margin: auto;
+            }
+
+            h1 {
+                font-size: 44px;
+                line-height: 56px;
+                padding-bottom: 24px;
+
+                @media (max-width: 767px) {
+                    font-size: 28px;
+                    line-height: 38px;
+                    padding-bottom: 16px;
+                }
+            }
+
+
+            .gp-acceletor-card-title {
+                font-size: 18px;
+                line-height: 29px;
+                font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", " Arial";
+
+                @media(max-width: 768px) {
+                    font-size: 16px;
+                    line-height: 29px;
+                }
+            }
+        }
+
+    }
+}

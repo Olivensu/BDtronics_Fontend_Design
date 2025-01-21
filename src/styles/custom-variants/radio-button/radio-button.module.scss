@@ -1,0 +1,81 @@
+.blue_border_radio_style {
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid #0078CF !important;
+    position: relative !important;
+    background-color: white !important;
+
+    &:hover {
+        border-color: #0078CF !important;
+        background-color: white !important;
+    }
+
+    &::before {
+        width: 10px !important;
+        height: 10px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 100% !important;
+        background-color: #0078CF !important;
+    }
+}
+
+.grey_border_radio_style {
+    width: 20px !important;
+    height: 20px !important;
+    border: 2px solid rgba(0,0,0,0.16) !important;
+    position: relative !important;
+    background-color: white !important;
+
+    &:hover {
+        border-color: rgba(0,0,0,0.16) !important;
+        background-color: white !important;
+    }
+
+    &::before {
+        width: 10px !important;
+        height: 10px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 100% !important;
+        background-color: #0078CF !important;
+    }
+}
+
+.survey_form_radio_style {
+    width: 18px !important;
+    height: 18px !important;
+    border: 2px solid rgba(0,0,0,0.16) !important;
+    position: relative !important;
+    background-color: white !important;
+
+    &:hover {
+        border-color: rgba(0,0,0,0.16) !important;
+        background-color: white !important;
+    }
+
+    &::before {
+        width: 8px !important;
+        height: 8px !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        border-radius: 100% !important;
+        background-color: #19AAF8 !important;
+    }
+}
+
+.bold_radio_label {
+    :global {
+        .chakra-radio__label {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
