@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
 
-const BarcodeReader = () => {
+export default function BarcodeReader() {
   useEffect(() => {
     let scanner;
 
@@ -52,5 +52,5 @@ const BarcodeReader = () => {
   );
 };
 
-export default BarcodeReader;
+// export default BarcodeReader;
 
