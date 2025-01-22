@@ -1,41 +1,45 @@
-'use client'
+"use client";
 // Implementation of Barcode Scanner using ZXing and Material-UI
-import React, { useEffect } from 'react';
-import { BarcodeScanner } from 'dynamsoft-javascript-barcode';
+import React, { useEffect } from "react";
+import { BarcodeScanner } from "dynamsoft-javascript-barcode";
 
 export default function BarcodeReader() {
   useEffect(() => {
     let scanner;
 
     (async () => {
-      // Set your trial license key
-      BarcodeScanner.license = 'DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAzNjIzMzYwLVRYbFhaV0pRY205cSIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21kbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAzNjIzMzYwIiwic3RhbmRieVNlcnZlclVSTCI6Imh0dHBzOi8vc2Rscy5keW5hbXNvZnRvbmxpbmUuY29tIiwiY2hlY2tDb2RlIjoxNjg0MzUyOTcyfQ==';
+      try {
+        // Set your trial license key (MUST BE SET FIRST)
+        BarcodeScanner.license =
+          "DLS2eyJoYW5kc2hha2VDb2RlIjoiMTAzNjIzMzYwLVRYbFhaV0pRY205cSIsIm1haW5TZXJ2ZXJVUkwiOiJodHRwczovL21kbHMuZHluYW1zb2Z0b25saW5lLmNvbSIsIm9yZ2FuaXphdGlvbklEIjoiMTAzNjIzMzYwIiwic3RhbmRieVNlcnZlclVSTCI6Imh0dHBzOi8vc2Rscy5keW5hbXNvZnRvbmxpbmUuY29tIiwiY2hlY2tDb2RlIjoxNjg0MzUyOTcyfQ==";
 
-      // Create a scanner instance
-      scanner = await BarcodeScanner.createInstance();
+        // Create a scanner instance
+        scanner = await BarcodeScanner.createInstance();
 
-      // Enable video input from the mobile camera
-      scanner.uiElement = document.getElementById('barcode-scanner');
+        // Attach the scanner to a specific HTML element
+        scanner.uiElement = document.getElementById("barcode-scanner");
 
-      // Optional: Configure the scanner for mobile optimization
-      scanner.cameraSettings = {
-        video: {
-          facingMode: 'environment', // Use the rear camera
-        },
-      };
+        // Handle barcode results
+        scanner.onFrameRead = (results) => {
+          results.forEach((result) => {
+            console.log("Barcode Detected:", result.barcodeText);
+          });
+        };
 
-      // Handle the scanned results
-      scanner.onUnduplicatedRead = (txt, result) => {
-        console.log('Barcode Data:', txt);
-        alert(`Scanned: ${txt}`);
-      };
+        // Handle unique barcode reads
+        scanner.onUnduplicatedRead = (txt) => {
+          alert(`Barcode Scanned: ${txt}`);
+        };
 
-      // Start the scanner
-      await scanner.show();
+        // Start the scanner
+        await scanner.show();
+      } catch (err) {
+        console.error("Error initializing the barcode scanner:", err);
+      }
     })();
 
-    // Cleanup when component is unmounted
     return () => {
+      // Cleanup when the component unmounts
       if (scanner) {
         scanner.hide();
         scanner.destroy();
@@ -45,12 +49,17 @@ export default function BarcodeReader() {
 
   return (
     <div>
-      <h1>Scan Barcode</h1>
-      {/* Camera Feed Area */}
-      <div className=' w-full h-[300px] m-auto' style={{ width: '100%', height: '400px' }}></div>
+      <h1>Mobile Camera Barcode Scanner</h1>
+      <div
+        id="barcode-scanner"
+        style={{
+          width: "100%",
+          height: "400px",
+          border: "1px solid #ccc",
+        }}
+      ></div>
     </div>
   );
-};
+}
 
 // export default BarcodeReader;
-
