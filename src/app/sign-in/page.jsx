@@ -4,6 +4,7 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
 
 
 export default function CustomerLogin() {
@@ -64,10 +65,10 @@ export default function CustomerLogin() {
             </div>
 
             <div className="flex items-center justify-between">
-              <a href="#" className="text-sm text-primary hover:underline">
+              <Link href="#" className="text-sm text-primary hover:underline">
                 Forgot Your Password?
-              </a>
-              <button type="submit" className="bg-warning rounded-4xl px-5 py-2 text-black">
+              </Link>
+              <button type="submit" className="bg-blue rounded-4xl px-5 py-2 text-black">
                 SIGN IN
               </button>
             </div>
@@ -80,9 +81,12 @@ export default function CustomerLogin() {
           <p className="text-gray-600 mb-6">
             Creating an account has many benefits: check out faster, keep more than one address, track orders and more.
           </p>
-          <button className="bg-warning rounded-4xl px-5 py-2 w-full  text-black">
+          <hr />
+          <Link href='register'>
+          <button className=" my-10 bg-blue rounded-4xl px-5 py-2 w-full  text-black">
             CREATE AN ACCOUNT
           </button>
+          </Link>
         </div>
       </div>
     </div>

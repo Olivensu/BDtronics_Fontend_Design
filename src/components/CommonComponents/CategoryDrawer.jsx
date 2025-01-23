@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react'
 
 export const CategoryDrawer = ({isOpen, setIsOpen}) => {
@@ -28,25 +29,25 @@ export const CategoryDrawer = ({isOpen, setIsOpen}) => {
               <h2 className="text-lg font-bold">Shop by Categories</h2>
               <ul className="menu menu-compact mt-4">
                 <li>
-                  <a href="#how-to-order">How to Order</a>
+                  <Link href="#how-to-order">How to Order</Link>
                 </li>
                 <li>
-                  <a href="#3d-printing">3D Printing Service</a>
+                  <Link href="#3d-printing">3D Printing Service</Link>
                 </li>
                 <li>
-                  <a href="#solar-calculator">Solar Calculator</a>
+                  <Link href="#solar-calculator">Solar Calculator</Link>
                 </li>
                 <li>
-                  <a href="#blog">Blog</a>
+                  <Link href="#blog">Blog</Link>
                 </li>
                 <li>
-                  <a href="#facebook">Facebook Page</a>
+                  <Link href="#facebook">Facebook Page</Link>
                 </li>
                 <li>
-                  <a href="#youtube">YouTube Channel</a>
+                  <Link href="#youtube">YouTube Channel</Link>
                 </li>
                 <li>
-                  <a href="#contact">Contact</a>
+                  <Link href="#contact">Contact</Link>
                 </li>
               </ul>
             </div>

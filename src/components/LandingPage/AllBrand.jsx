@@ -21,7 +21,7 @@ export const AllBrand = () => {
         </button>
         </Link>
       </div>
-      <div className="grid md:grid-cols-8 grid-cols-4 mx-auto gap-4 my-10">
+      {/* <div className="grid md:grid-cols-8 grid-cols-4 mx-auto gap-4 my-10">
       <img src="/img/brand/20.webp" alt="" />
       <img src="/img/brand/21.webp" alt="" />
       <img src="/img/brand/22.webp" alt="" />
@@ -30,45 +30,43 @@ export const AllBrand = () => {
       <img src="/img/brand/21.webp" alt="" />
       <img src="/img/brand/22.webp" alt="" />
       <img src="/img/brand/23.webp" alt="" />
-      </div>
+      </div> */}
       <div>
+        {/* className={`${slidePerViewAuto.slide_per_view_auto} ${disabledNavigationStyles.hide_disabled} ${navigationStyles.noBg} ${navigationPositionStyle.left_right_zero}`} */}
       <Swiper
-  className={`${slidePerViewAuto.slide_per_view_auto} ${disabledNavigationStyles.hide_disabled} ${navigationStyles.noBg} ${navigationPositionStyle.left_right_zero}`}
+ 
   navigation={true}
   loop={false}
   slidesPerView="auto"
   modules={[Navigation]}
   breakpoints={{
-    // Mobile View (up to 640px)
     640: {
       slidesPerView: 3,
-      spaceBetween: 10, // Adjust space between slides for mobile
+      spaceBetween: 10,
     },
-    // Tablet View (up to 768px)
     768: {
       slidesPerView: 4,
-      spaceBetween: 15, // Adjust space between slides for tablets
+      spaceBetween: 15, 
     },
-    // Desktop View (default and above 1024px)
     1024: {
       slidesPerView: 6,
-      spaceBetween: 20, // Adjust space between slides for desktop
+      spaceBetween: 20, 
     },
   }}
 >
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 1" />
+      <img src="/img/brand/20.webp" alt="Brand 1" />
     </div>
   </SwiperSlide>
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 2" />
+      <img src="/img/brand/21.webp" alt="Brand 2" />
     </div>
   </SwiperSlide>
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 3" />
+      <img src="/img/brand/22.webp" alt="Brand 3" />
     </div>
   </SwiperSlide>
   <SwiperSlide>
@@ -78,17 +76,17 @@ export const AllBrand = () => {
   </SwiperSlide>
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 5" />
+      <img src="/img/brand/20.webp" alt="Brand 5" />
     </div>
   </SwiperSlide>
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 6" />
+      <img src="/img/brand/21.webp" alt="Brand 6" />
     </div>
   </SwiperSlide>
   <SwiperSlide>
     <div>
-      <img src="/img/brand/23.webp" alt="Brand 6" />
+      <img src="/img/brand/22.webp" alt="Brand 6" />
     </div>
   </SwiperSlide>
   <SwiperSlide>

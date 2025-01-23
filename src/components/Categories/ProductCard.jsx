@@ -10,12 +10,12 @@ export default function ProductCard({
   imageUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-v99psng6UnYYlSAzcewA6dIieY1GT2.png"
 }) {
   return (
-    <div className="group relative w-full max-w-sm overflow-hidden transition-all shadow-lg hover:shadow-xl">
+    <div className="group relative w-full max-w-sm overflow-hidden transition-all shadow-lg rounded-xl shadow-gray border-[1px] border-gray-light hover:shadow-xl">
       <div className="p-0">
         {/* Product Image */}
         <div className="relative aspect-square">
           <img
-            src='/img/product/11.webp'
+            src='/img/product/10.webp'
             alt={name}
             className="h-full w-full object-cover"
           />

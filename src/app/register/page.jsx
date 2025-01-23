@@ -4,81 +4,20 @@
 
 import { useState } from "react";
 import { Eye, EyeOff } from "lucide-react";
+import Link from "next/link";
 
 
 export default function CustomerRegister() {
   const [showPassword, setShowPassword] = useState(false);
-  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-6xl">
-  
-  <button
-        className="btn btn-primary"
-        onClick={() => setIsOpen(true)}
-      >
-        Open Drawer
-      </button>
-    <div className="relative z-50">
-      
-
-      <div
-        className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-transform duration-300 ${
-          isOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-        style={{
-          width: window.innerWidth < 768 ? '100%' : '400px',
-        }}
-      >
-        <button
-          className="btn btn-sm btn-circle absolute top-2 right-2"
-          onClick={() => setIsOpen(false)}
-        >
-          ✕
-        </button>
-
-        <div className="p-4">
-          <h2 className="text-lg font-bold">Shop by Categories</h2>
-          <ul className="menu menu-compact mt-4">
-            <li>
-              <a href="#how-to-order">How to Order</a>
-            </li>
-            <li>
-              <a href="#3d-printing">3D Printing Service</a>
-            </li>
-            <li>
-              <a href="#solar-calculator">Solar Calculator</a>
-            </li>
-            <li>
-              <a href="#blog">Blog</a>
-            </li>
-            <li>
-              <a href="#facebook">Facebook Page</a>
-            </li>
-            <li>
-              <a href="#youtube">YouTube Channel</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-
-      {isOpen && (
-        <div
-          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50"
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )}
-    </div>
  
       <h1 className="text-2xl font-semibold text-center mb-8">Create New Customer Account</h1>
 
-      <div className="grid md:grid-cols-2 gap-8 ">
+      <div className="max-w-[500px]  mx-auto ">
         {/* Login Section */}
         <div className="p-6 bg-white rounded-lg shadow-sm border">
-          <h2 className="text-xl font-semibold mb-4">Login Information</h2>
           <p className="text-gray-600 mb-6">
           </p>
 
@@ -89,6 +28,36 @@ export default function CustomerRegister() {
                 className="block text-sm font-medium text-gray-700 mb-1"
               >
                 Email
+              </label>
+              <input
+                  type="text"
+                  id="password"
+                  name="email"
+                  className="w-full pr-10 input input-bordered"
+                  required
+                />
+            </div>
+            <div>
+              <label
+                htmlFor="phone"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Phone
+              </label>
+              <input
+                  type="number"
+                  id="password"
+                  name="email"
+                  className="w-full pr-10 input input-bordered"
+                  required
+                />
+            </div>
+            <div>
+              <label
+                htmlFor="address"
+                className="block text-sm font-medium text-gray-700 mb-1"
+              >
+                Address
               </label>
               <input
                   type="text"
@@ -150,7 +119,7 @@ export default function CustomerRegister() {
 
             <div className="flex items-center justify-between">
               
-              <button type="submit" className="bg-warning rounded-4xl px-5 py-2 text-black">
+              <button type="submit" className="bg-blue w-full rounded-xl px-5 py-2 text-black">
                 Register
               </button>
             </div>

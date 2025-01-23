@@ -29,7 +29,17 @@ export const PopularCategories = () => {
         <div className="relative bg-[#F1F1F1]">
           <img
             className=""
-            src="/img/categories/3d-printer.webp"
+            src="/img/categories/inverter.webp"
+            alt="mobile-and-laptops"
+          />
+          <p className="bg-opacity-50 text-center text-sm px-2 py-1 rounded">
+            Mobile & Laptops
+          </p>
+        </div>
+        <div className="relative bg-[#F1F1F1]">
+          <img
+            className=""
+            src="/img/categories/lifepo4.webp"
             alt="mobile-and-laptops"
           />
           <p className="bg-opacity-50 text-center text-sm px-2 py-1 rounded">
@@ -49,17 +59,7 @@ export const PopularCategories = () => {
         <div className="relative bg-[#F1F1F1]">
           <img
             className=""
-            src="/img/categories/3d-printer.webp"
-            alt="mobile-and-laptops"
-          />
-          <p className="bg-opacity-50 text-center text-sm px-2 py-1 rounded">
-            Mobile & Laptops
-          </p>
-        </div>
-        <div className="relative bg-[#F1F1F1]">
-          <img
-            className=""
-            src="/img/categories/3d-printer.webp"
+            src="/img/categories/lifepo4.webp"
             alt="mobile-and-laptops"
           />
           <p className="bg-opacity-50 text-center text-sm px-2 py-1 rounded">

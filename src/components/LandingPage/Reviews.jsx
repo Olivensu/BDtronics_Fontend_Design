@@ -1,7 +1,8 @@
-import React from "react";
-import Link from "next/link";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
+'use client'
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper';
 import ReviewCard from "../review/ReviewCard";
+
 
 export const Reviews = () => {
   return (
@@ -9,11 +10,44 @@ export const Reviews = () => {
       <div className="flex">
         <p className=" text-[1.5rem] mr-5 font-semibold">Reviews from Our Customers</p>
       </div>
-      <div className=" grid grid-cols-3">
-      <ReviewCard></ReviewCard>
-      <ReviewCard></ReviewCard>
-      <ReviewCard></ReviewCard>
-      </div>
+
+      <Swiper
+ 
+  navigation={true}
+  loop={false}
+  slidesPerView="auto"
+  modules={[Navigation]}
+  breakpoints={{
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 15, 
+    },
+    1024: {
+      slidesPerView: 3,
+      spaceBetween: 20, 
+    },
+  }}
+>
+  <SwiperSlide>
+  <ReviewCard></ReviewCard>
+  </SwiperSlide>
+  <SwiperSlide>
+  <ReviewCard></ReviewCard>
+  </SwiperSlide>
+  <SwiperSlide>
+  <ReviewCard></ReviewCard>
+  </SwiperSlide>
+  <SwiperSlide>
+  <ReviewCard></ReviewCard>
+  </SwiperSlide>
+  <SwiperSlide>
+  <ReviewCard></ReviewCard>
+  </SwiperSlide>
+</Swiper>
       </div>
   )
 }
