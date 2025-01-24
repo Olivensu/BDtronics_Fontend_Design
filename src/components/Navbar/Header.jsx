@@ -10,9 +10,12 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 import Link from "next/link";
 import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
+import { Delete, Edit } from "@mui/icons-material";
 
 const Header = () => {
   const [state, setState] = useState({
@@ -124,7 +127,7 @@ const Header = () => {
             >
               {/* Close Button */}
               <button
-                className="btn btn-sm btn-circle bg-red-500 absolute top-4 right-4 text-white"
+                className="bg-red font-bold text-white py-1 px-2 rounded-full absolute top-4 right-4"
                 onClick={() => setIsOpenCart(false)}
               >
                 ✕
@@ -142,7 +145,7 @@ const Header = () => {
                   {/* Example Cart Item */}
                   <div className="mb-4 flex items-center">
                     <img
-                      src="https://via.placeholder.com/80"
+                      src="/img/product/14.webp"
                       alt="Product"
                       className="w-16 h-16 mr-4"
                     />
@@ -154,11 +157,19 @@ const Header = () => {
                       <p className="text-lg font-bold text-blue-500">
                         BDT 185.00
                       </p>
+                      <div className="my-2">
+                      <button className="p-1 bg-yellow rounded-full">
+                        <Edit />
+                      </button>
+                      <button className="p-1 bg-yellow rounded-full ml-3">
+                        <Delete />
+                      </button>
+                      </div>
                     </div>
                   </div>
                   <div className="mb-4 flex items-center">
                     <img
-                      src="https://via.placeholder.com/80"
+                      src="/img/product/13.webp"
                       alt="Product"
                       className="w-16 h-16 mr-4"
                     />
@@ -170,6 +181,14 @@ const Header = () => {
                       <p className="text-lg font-bold text-blue-500">
                         BDT 2,408.00
                       </p>
+                      <div className="my-2">
+                      <button className="p-1 bg-yellow rounded-full">
+                        <Edit />
+                      </button>
+                      <button className="p-1 bg-yellow rounded-full ml-3">
+                        <Delete />
+                      </button>
+                      </div>
                     </div>
                   </div>
                 </div>
