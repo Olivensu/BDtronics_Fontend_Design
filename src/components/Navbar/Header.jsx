@@ -118,12 +118,12 @@ const Header = () => {
 
           <div className="z-50 ">
             <div
-              className={`fixed top-0 right-0 h-[100vh] px-5 bg-white shadow-lg transition-transform duration-300 ${
+              className={`w-full md:w-[400px] fixed top-0 right-0 h-[100vh] px-5 bg-white shadow-lg transition-transform duration-300 ${
                 isOpenCart ? "translate-x-0" : "translate-x-full"
               }`}
-              style={{
-                width: window.innerWidth < 768 ? "100%" : "400px",
-              }}
+              // style={{
+              //   width: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : "400px",
+              // }}
             >
               {/* Close Button */}
               <button
@@ -309,12 +309,12 @@ const Header = () => {
 
               <div className="relative z-50">
                 <div
-                  className={`fixed top-0 left-0 h-full bg-white shadow-lg transition-transform duration-300 ${
-                    isOpen ? "translate-x-0" : "-translate-x-full"
+                  className={`w-full md:w-[400px] fixed top-0 left-0 h-full bg-white shadow-lg transition-transform duration-300 ${
+                    isOpen ? "translate-x-0" : "-translate-x-full "
                   }`}
-                  style={{
-                    width: window.innerWidth < 768 ? "100%" : "400px",
-                  }}
+                  // style={{
+                  //   width: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : "400px",
+                  // }}
                 >
                   <button
                     className="btn btn-sm btn-circle bg-blue absolute top-4 right-2"
