@@ -16,6 +16,7 @@ import Link from "next/link";
 import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
 import { Delete, Edit } from "@mui/icons-material";
+import SearchProductList from "../common/SearchItemList";
 
 const Header = () => {
   const [state, setState] = useState({
@@ -50,6 +51,8 @@ const Header = () => {
     }
   };
 
+ 
+
   return (
     <div className="">
       <div className=" h-9 bg-[#F3F4F6] p-[6px] hidden md:block">
@@ -74,7 +77,7 @@ const Header = () => {
         </Link>
 
         <div className="relative w-full max-w-3xl">
-          <label className="relative flex w-full items-center">
+          {/* <label className="relative flex w-full items-center">
             <input
               type="text"
               placeholder="Search products..."
@@ -85,20 +88,9 @@ const Header = () => {
               className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-white hover:bg-warning/90 focus:outline-none focus:ring-2 focus:ring-warning/20"
             >
               <SearchIcon className="text-black" />
-              {/* <svg
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 16 16"
-            fill="currentColor"
-            className="h-4 w-4 opacity-90"
-          >
-            <path
-              fillRule="evenodd"
-              d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z"
-              clipRule="evenodd"
-            />
-          </svg> */}
             </button>
-          </label>
+          </label> */}
+          <SearchProductList></SearchProductList>
         </div>
         <div className="flex justify-end items-center">
           <Link href="#">
@@ -201,9 +193,11 @@ const Header = () => {
                       BDT 2,593.00
                     </p>
                   </div>
+                  
                   <button className="btn btn-primary w-full mb-2">
-                    CHECKOUT
+                  <Link href='/checkout'>CHECKOUT</Link>
                   </button>
+                  
                   <a
                     href="/cart"
                     className="block text-center text-blue-500 underline"
