@@ -11,7 +11,7 @@ export const ProductImgSlide = () => {
       slidesPerView="auto"
       modules={[Navigation]}
       breakpoints={{
-        640: {
+        200: {
           slidesPerView: 3,
           spaceBetween: 10,
         },
