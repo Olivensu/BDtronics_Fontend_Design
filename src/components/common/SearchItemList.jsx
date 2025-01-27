@@ -90,11 +90,11 @@ const SearchProductList = () => {
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full rounded-full outline-4 border border-gray-200 bg-white px-4 py-2 pr-12 text-sm focus:border-blue focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="w-full rounded-full outline-4 border border-blue bg-white px-4 py-2 pr-12 text-sm focus:border-blue focus:outline-blue focus:ring-2 focus:ring-blue-300"
               />
               <button
                 type="button"
-                className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
               >
                 <SearchIcon className="text-black" />
               </button>
@@ -103,7 +103,7 @@ const SearchProductList = () => {
             {/* Products Dropdown */}
             {searchQuery.length >= 2 && (
               <div className="absolute z-10 mt-2 w-full bg-white shadow-lg rounded-lg border border-gray-200 max-h-80 overflow-y-auto">
-                {filteredProducts.length > 0 ? (
+                {filteredProducts.length > 0 ? <div className="grid grid-cols-1 md:grid-cols-2">{
                   filteredProducts.map((product) => (
                     <div
                       key={product.id}
@@ -133,8 +133,8 @@ const SearchProductList = () => {
                         </p>
                       </div>
                     </div>
-                  ))
-                ) : (
+                  ))}</div>
+                 : (
                   <div className="p-4 text-center text-gray-500">
                     No products found matching "{searchQuery}"
                   </div>

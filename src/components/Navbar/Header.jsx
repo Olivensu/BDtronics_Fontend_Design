@@ -55,7 +55,7 @@ const Header = () => {
 
   return (
     <div className="">
-      <div className=" h-9 bg-[#F3F4F6] p-[6px] hidden md:block">
+      <div className=" h-9 bg-blue p-[6px] hidden md:block">
         <div className="mx-auto max-w-[1260px] flex text-sm items-center">
           <CallIcon />
           <p className="ml-1 mr-1 ">01974 277 797 </p>
@@ -67,11 +67,11 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center max-w-screen-xl  lg:mt-0 mx-auto my-2 md:my-0">
+      <div className="flex justify-between items-center max-w-screen-xl  lg:mt-0 mx-auto my-2 md:my-0 relative">
         <Link href="/">
           <img
             className="w-24 md:w-28 lg:w-36 ml-3 rounded-full"
-            src="/img/icon/icon.jpg"
+            src="/img/icon/Voltech-Black.PNG"
             alt="olivs"
           />
         </Link>
@@ -85,7 +85,7 @@ const Header = () => {
             />
             <button
               type="submit"
-              className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-white hover:bg-warning/90 focus:outline-none focus:ring-2 focus:ring-warning/20"
+              className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-black hover:bg-warning/90 focus:outline-none focus:ring-2 focus:ring-warning/20"
             >
               <SearchIcon className="text-black" />
             </button>
@@ -93,7 +93,7 @@ const Header = () => {
           <SearchProductList></SearchProductList>
         </div>
         <div className="flex justify-end items-center">
-          <Link href="#">
+          {/* <Link href="#">
             <div className="hidden lg:inline mr-[-10px] ml-1">
               <div>
                 <IconButton
@@ -106,7 +106,7 @@ const Header = () => {
                 </IconButton>
               </div>
             </div>
-          </Link>
+          </Link> */}
 
           <div className="z-50 ">
             <div
@@ -119,7 +119,7 @@ const Header = () => {
             >
               {/* Close Button */}
               <button
-                className="bg-red font-bold text-white py-1 px-2 rounded-full absolute top-4 right-4"
+                className="bg-red font-bold text-black py-1 px-2 rounded-full absolute top-4 right-4"
                 onClick={() => setIsOpenCart(false)}
               >
                 ✕
@@ -217,7 +217,7 @@ const Header = () => {
             )}
           </div>
 
-          <IconButton color="primary" sx={{ p: "" }} aria-label="directions">
+          {/* <IconButton color="primary" sx={{ p: "" }} aria-label="directions">
             <ul className="menu">
               <li>
                 <details>
@@ -245,7 +245,7 @@ const Header = () => {
                 </details>
               </li>
             </ul>
-          </IconButton>
+          </IconButton> */}
         </div>
       </div>
       <div className="bg-blue mx-auto pt-[1px] lg:mt-0">
@@ -292,13 +292,13 @@ const Header = () => {
                 </Link>
               </ul>
             </div>
-            <div className="flex lg:flex hidden lg:inline ">
+            <div className="flex lg:flex hidden lg:inline text-black">
               <button
                 onClick={() => setIsOpen(true)}
-                className="flex items-center bg-white px-3 rounded-t-xl"
+                className="flex items-center bg-white px-3 rounded-t-xl text-black"
               >
                 <ListIcon color="black" style={{ fontSize: "2rem" }}></ListIcon>
-                <p className="ml-2">Shop by Categories</p>
+                <p className="ml-2 ">Shop by Categories</p>
               </button>
 
               <div className="relative z-50">

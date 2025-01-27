@@ -13,7 +13,7 @@ export default {
       xl: '1290px',
     },
     colors: {
-      'blue': '#00f0ff',
+      'blue': '#F1FBFF',
       'purple': '#7e5bef',
       'pink': '#ff49db',
       'orange': '#ED6C02',
@@ -24,7 +24,7 @@ export default {
       'gray-light': '#d3dce6',
       'white': '#FFFFFF',
       'black': '#000000',
-      'red': '#FF0000',
+      'red': '#E31345',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
