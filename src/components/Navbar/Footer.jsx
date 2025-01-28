@@ -31,7 +31,7 @@ const Footer = () => {
         <button className="flex flex-col items-center text-gray-600 relative">
           <ShoppingCartIcon className="w-6 h-6" />
           <span className="text-xs">Cart</span>
-          <span className="absolute top-0 right-[-12] bg-purple text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
+          <span className="absolute top-0 right-[-12px] bg-purple text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
             0
           </span>
         </button>
