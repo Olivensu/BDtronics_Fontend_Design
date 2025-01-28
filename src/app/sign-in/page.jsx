@@ -68,7 +68,7 @@ export default function CustomerLogin() {
               <Link href="#" className="text-sm text-primary hover:underline">
                 Forgot Your Password?
               </Link>
-              <button type="submit" className="bg-blue rounded-4xl px-5 py-2 text-black">
+              <button type="submit" className="bg-red rounded-4xl px-5 py-2 text-white font-bold">
                 SIGN IN
               </button>
             </div>
@@ -83,7 +83,7 @@ export default function CustomerLogin() {
           </p>
           <hr />
           <Link href='register'>
-          <button className=" my-10 bg-blue rounded-4xl px-5 py-2 w-full  text-black">
+          <button className=" my-10 bg-red rounded-4xl px-5 py-2 w-full  text-white font-bold">
             CREATE AN ACCOUNT
           </button>
           </Link>

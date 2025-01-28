@@ -119,7 +119,7 @@ export default function CustomerRegister() {
 
             <div className="flex items-center justify-between">
               
-              <button type="submit" className="bg-blue w-full rounded-xl px-5 py-2 text-black">
+              <button type="submit" className="bg-red w-full rounded-xl px-5 py-2 text-white font-bold">
                 Register
               </button>
             </div>
