@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <div>
       
-    <footer className="md:hidden z-20 fixed bottom-4 left-4 right-4 bg-white rounded-2xl shadow-md">
+    <footer className="md:hidden z-20 fixed bottom-4 left-4 right-4 bg-blue rounded-2xl shadow-md shadow-gray">
       <nav className="flex justify-around items-center py-2">
         {/* Home Button */}
         <button className="flex flex-col items-center text-orange-500">
@@ -37,7 +37,7 @@ const Footer = () => {
         </button>
       </nav>
     </footer>
-      <footer className="bg-gray-50 py-12 px-4 md:px-6 lg:px-8 border-t-4 border-blue">
+      <footer className="bg-red text-white py-12 px-4 md:px-6 lg:px-8 border-t-4 border-blue">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Address Section */}
@@ -178,7 +178,7 @@ const Footer = () => {
         </div>
       </div>
       <hr />
-      <div className="flex justify-around items-center my-5 bg-white">
+      <div className="flex justify-around items-center my-5 ">
       <p className="text-2xl font-semibold">Voltech.com</p>
       <p>Copyright © 2024 Voltech.com. All rights reserved.</p>
       

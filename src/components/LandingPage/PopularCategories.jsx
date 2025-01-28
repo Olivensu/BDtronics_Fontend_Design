@@ -9,7 +9,7 @@ export const PopularCategories = () => {
       <div className="flex">
         <p className=" text-[1.5rem] mr-5 font-semibold">Popular Categories</p>
         <Link href='/categories'>
-        <button className="bg-[#FCB800] px-3 py-1 text-sm rounded-xl font-semibold" >
+        <button className="bg-red text-white px-3 py-1 text-sm rounded-xl font-semibold" >
           View All Categories
           <KeyboardArrowRightIcon />
         </button>

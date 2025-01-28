@@ -81,22 +81,22 @@ const SearchProductList = () => {
       };
     
       return (
-        <div className="container mx-auto relative">
+        <div className="relative ">
           {/* Search Form */}
-          <form className="mb-6 relative">
+          <form className=" relative">
             <label className="relative flex w-full items-center">
               <input
                 type="text"
                 placeholder="Search products..."
                 value={searchQuery}
                 onChange={handleSearchChange}
-                className="w-full rounded-full outline-4 border border-blue bg-white px-4 py-2 pr-12 text-sm focus:border-blue focus:outline-blue focus:ring-2 focus:ring-blue-300"
+                className="w-full rounded-full border border-red bg-white px-4 py-1 md:py-2 pr-12 text-sm focus:border-red focus:outline-red"
               />
               <button
                 type="button"
-                className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
+                className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-red px-4 text-black hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-300"
               >
-                <SearchIcon className="text-black" />
+                <SearchIcon className="text-white" />
               </button>
             </label>
     

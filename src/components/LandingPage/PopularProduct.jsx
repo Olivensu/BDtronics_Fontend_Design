@@ -11,7 +11,7 @@ export const PopularProduct = () => {
       <div className="flex mb-10">
         <p className=" text-[1.5rem] mr-5 font-semibold">Best Seller Products</p>
         <Link href="/products">
-          <button className="bg-[#FCB800] px-3 py-1 text-sm rounded-xl font-semibold">
+          <button className="bg-red text-white px-3 py-1 text-sm rounded-xl font-semibold">
             View All
             <KeyboardArrowRightIcon />
           </button>

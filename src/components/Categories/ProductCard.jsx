@@ -22,7 +22,7 @@ export default function ProductCard({
           {/* Add to Cart Overlay - Hidden by default, shown on hover */}
           <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 transition-opacity group-hover:opacity-100">
             <button 
-              className="bg-[#FDB813] text-black hover:bg-[#FDB813]/90 px-2 py-1 rounded-lg"
+              className="bg-red text-white px-2 py-1 font-semibold text-sm rounded-lg"
             >
               ADD TO CART
             </button>
@@ -32,7 +32,7 @@ export default function ProductCard({
         {/* Product Info */}
         <div className="space-y-2 p-4 ">
           <Link href='/products/products-details'>
-          <h3 className="text-sm text-blue-600 hover:underline">
+          <h3 className="text-sm text-blue-600">
             {name}
           </h3>
           </Link>
@@ -46,14 +46,14 @@ export default function ProductCard({
           </div>
         </div>
       </div>
-      <div className="flex justify-center gap-4 border-t p-4">
+      {/* <div className="flex justify-center gap-4 border-t p-4">
         <button className="text-gray-500 hover:text-gray-700">
           <Heart className="h-5 w-5" />
         </button>
         <button className="text-gray-500 hover:text-gray-700">
           <Scale className="h-5 w-5" />
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }

@@ -17,6 +17,7 @@ import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
 import { Delete, Edit } from "@mui/icons-material";
 import SearchProductList from "../common/SearchItemList";
+import { ShoppingCart, UserRound} from "lucide-react";
 
 const Header = () => {
   const [state, setState] = useState({
@@ -67,7 +68,7 @@ const Header = () => {
         </div>
       </div>
 
-      <div className="flex justify-between items-center max-w-screen-xl  lg:mt-0 mx-auto my-2 md:my-0 relative">
+      <div className="flex justify-between items-center max-w-screen-xl mx-auto my-2 relative">
         <Link href="/">
           <img
             className="w-24 md:w-28 lg:w-36 ml-3 rounded-full"
@@ -76,37 +77,32 @@ const Header = () => {
           />
         </Link>
 
-        <div className="relative w-full max-w-3xl">
-          {/* <label className="relative flex w-full items-center">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="w-full rounded-full outline-4 border-warning border border-gray-200 bg-white px-4 py-2 pr-12 text-sm focus:border-blue focus:outline-none focus:ring-2 focus:ring-warning/20"
-            />
-            <button
-              type="submit"
-              className="absolute right-0 flex h-full items-center justify-center rounded-r-full bg-blue px-4 text-black hover:bg-warning/90 focus:outline-none focus:ring-2 focus:ring-warning/20"
-            >
-              <SearchIcon className="text-black" />
-            </button>
-          </label> */}
+        <div className="relative w-full max-w-3xl mx-5">
           <SearchProductList></SearchProductList>
         </div>
-        <div className="flex justify-end items-center">
-          {/* <Link href="#">
-            <div className="hidden lg:inline mr-[-10px] ml-1">
+    
+          
+           <div className="flex mr-5">
+           <div className="hidden md:inline ml-1">
+            <Link href="#">
               <div>
-                <IconButton
-                  color="primary"
-                  sx={{ p: "" }}
-                  aria-label="directions"
-                  onClick={() => setIsOpenCart(true)}
-                >
-                  <AddShoppingCartIcon style={{ fontSize: "2rem" }} />
-                </IconButton>
+                <button onClick={() => setIsOpenCart(true)}>
+                  <ShoppingCart className="h-8 w-8" />
+                </button>
               </div>
+              </Link>
             </div>
-          </Link> */}
+          
+          
+            <div className="hidden md:inline ml-[30px]">
+            <Link href="/sign-in">
+              <div>
+                  <UserRound className="h-8 w-8" />
+              </div>
+              </Link>
+            </div>
+           </div>
+          
 
           <div className="z-50 ">
             <div
@@ -119,7 +115,7 @@ const Header = () => {
             >
               {/* Close Button */}
               <button
-                className="bg-red font-bold text-black py-1 px-2 rounded-full absolute top-4 right-4"
+                className="bg-red font-bold text-white py-1 px-2 rounded-full absolute top-4 right-4"
                 onClick={() => setIsOpenCart(false)}
               >
                 ✕
@@ -194,7 +190,7 @@ const Header = () => {
                     </p>
                   </div>
                   
-                  <button className="btn btn-primary w-full mb-2">
+                  <button className="btn bg-red text-white w-full mb-2">
                   <Link href='/checkout'>CHECKOUT</Link>
                   </button>
                   
@@ -246,12 +242,12 @@ const Header = () => {
               </li>
             </ul>
           </IconButton> */}
-        </div>
+        {/* </div> */}
       </div>
-      <div className="bg-blue mx-auto pt-[1px] lg:mt-0">
+      <div className="bg-red mx-auto pt-[1px] lg:mt-0">
         <div className="mx-2 md:mx-10">
           <div className="max-w-screen-xl mx-auto flex justify-between items-center">
-            <div className="flex w-full justify-between item-center lg:hidden">
+            {/* <div className="flex w-full justify-between item-center lg:hidden">
               <ul className="menu">
                 <Link href="/products">
                   <li>
@@ -291,8 +287,8 @@ const Header = () => {
                   </li>
                 </Link>
               </ul>
-            </div>
-            <div className="flex lg:flex hidden lg:inline text-black">
+            </div> */}
+            <div className="flex lg:flex hidden lg:inline text-white">
               <button
                 onClick={() => setIsOpen(true)}
                 className="flex items-center bg-white px-3 rounded-t-xl text-black"
@@ -301,9 +297,9 @@ const Header = () => {
                 <p className="ml-2 ">Shop by Categories</p>
               </button>
 
-              <div className="relative z-50">
+              <div className="relative z-50 text-black">
                 <div
-                  className={`w-full md:w-[400px] fixed top-0 left-0 h-full bg-white shadow-lg transition-transform duration-300 ${
+                  className={`w-full md:w-[400px] fixed top-0 left-0 h-full bg-blue shadow-lg transition-transform duration-300 ${
                     isOpen ? "translate-x-0" : "-translate-x-full "
                   }`}
                   // style={{
@@ -311,17 +307,17 @@ const Header = () => {
                   // }}
                 >
                   <button
-                    className="btn btn-sm btn-circle bg-blue absolute top-4 right-2"
+                    className="btn btn-sm btn-circle bg-red text-white absolute top-4 right-2"
                     onClick={() => setIsOpen(false)}
                   >
                     ✕
                   </button>
 
                   <div className="">
-                    <h2 className="font-bold bg-blue py-4 pl-5 text-2xl">
+                    <h2 className="font-bold bg-red py-4 pl-5 text-2xl">
                       Shop by Categories
                     </h2>
-                    <ul className="menu menu-compact divide-blue divide-y-2">
+                    <ul className="menu menu-compact divide-red divide-y-2">
                       <li>
                         <Link href="#how-to-order">How to Order</Link>
                       </li>
@@ -407,14 +403,14 @@ const Header = () => {
                 </Link>
               </ul>
               <ul className="menu ml-3">
-                <Link href="/address-book">
+                <Link href="/how-to-order">
                   <li>
                     <p>
                       <LocalShippingIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
                       ></LocalShippingIcon>{" "}
-                      Delivery Address
+                      How To Order
                     </p>
                   </li>
                 </Link>
