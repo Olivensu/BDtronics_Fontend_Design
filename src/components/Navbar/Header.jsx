@@ -72,7 +72,7 @@ const Header = () => {
         <Link href="/">
           <img
             className="w-24 md:w-28 lg:w-36 ml-3 rounded-full"
-            src="/img/icon/Voltech-Black.PNG"
+            src="/img/icon/Voltech-Black.png"
             alt="olivs"
           />
         </Link>
