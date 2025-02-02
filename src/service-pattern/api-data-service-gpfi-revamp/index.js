@@ -1,0 +1,1 @@
+export const Home_Page_Banners = '/customer/banners';
