@@ -13,7 +13,7 @@ import SwiperCore, {
 
 SwiperCore.use([Autoplay, Pagination, Navigation, Mousewheel, Keyboard]);
 
-const FancySlider = () => {
+const FancySlider = ({banner}) => {
   return (
     <div className="w-full">
       <Swiper
@@ -27,22 +27,16 @@ const FancySlider = () => {
         pagination={{
           clickable: true,
         }}
-        navigation={true}
+        // navigation={true}
         mousewheel={true}
         keyboard={true}
         className="mySwiper w-full shadow-2xl"
       >
+        {banner?.data.map((data,index)=><SwiperSlide key={index}>
+          <img className="w-full h-full" src={data?.image} alt="Slide 1" />
+        </SwiperSlide>)}
         <SwiperSlide>
           <img className="w-full" src="/img/flash-sale/11.webp" alt="Slide 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/13.webp" alt="Slide 3" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="w-full" src="/img/flash-sale/12.webp" alt="Slide 4" />
         </SwiperSlide>
       </Swiper>
     </div>

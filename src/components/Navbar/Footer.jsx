@@ -37,9 +37,9 @@ const Footer = () => {
         </button>
       </nav>
     </footer>
-      <footer className="bg-red text-white py-12 px-4 md:px-6 lg:px-8 border-t-4 border-blue">
+      <footer className="bg-blue text-black py-12 px-4 md:px-6 lg:px-8 border-t-4 border-blue">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Address Section */}
           <div className="space-y-4">
             <h3 className="font-semibold text-lg">ADDRESS</h3>
@@ -141,7 +141,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter Section */}
-          <div className="space-y-4 lg:col-span-1">
+          {/* <div className="space-y-4 lg:col-span-1">
             <h3 className="font-semibold text-lg">NEWSLETTER</h3>
             <form className="space-y-4">
               <input type="email" placeholder="Enter your email address" className="w-full input border-blue" />
@@ -158,11 +158,11 @@ const Footer = () => {
                 apply.
               </p>
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Social Media Links */}
-        <div className="mt-12 flex flex-col items-center justify-center space-y-4">
+        {/* <div className="mt-12 flex flex-col items-center justify-center space-y-4">
           <p className="text-gray-600">Find us on:</p>
           <div className="flex space-x-4">
             <a href="#" className="p-2 bg-blue-600 text-white rounded-full hover:bg-blue-700">
@@ -175,15 +175,15 @@ const Footer = () => {
               <Twitter className="h-5 w-5" />
             </a>
           </div>
-        </div>
+        </div> */}
       </div>
-      <hr />
-      <div className="flex justify-around items-center my-5 ">
+      {/* <hr /> */}
+      <div className="flex justify-around items-center rounded-2xl py-5 mt-5 bg-emerald-100">
       <p className="text-2xl font-semibold">Voltech.com</p>
       <p>Copyright © 2024 Voltech.com. All rights reserved.</p>
       
       </div>
-      <hr />
+      {/* <hr /> */}
     </footer>
     </div>
 //     <div className='text-start'>

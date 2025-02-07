@@ -3,12 +3,15 @@ import FancySlider from "../Slider/FancySlider";
 
 
 
-const Banner1 = () => {
+const Banner1 = ({dataToBeSent}) => {
+
+  // console.log('dataToBeSent',dataToBeSent?.banner_data);
+  
   return (
     <div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-5">
         <div className="col-span-3">
-          <FancySlider></FancySlider>
+          <FancySlider banner={dataToBeSent?.banner_data}></FancySlider>
         </div>
         <div>
           <div className="grid grid-cols-2 lg:grid-cols-1 gap-5 w-full">

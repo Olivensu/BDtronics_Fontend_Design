@@ -18,6 +18,10 @@ import ListIcon from "@mui/icons-material/List";
 import { Delete, Edit } from "@mui/icons-material";
 import SearchProductList from "../common/SearchItemList";
 import { ShoppingCart, UserRound} from "lucide-react";
+import WidgetsOutlinedIcon from '@mui/icons-material/WidgetsOutlined';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
+import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
+import RoofingOutlinedIcon from '@mui/icons-material/RoofingOutlined';
 
 const Header = () => {
   const [state, setState] = useState({
@@ -244,7 +248,7 @@ const Header = () => {
           </IconButton> */}
         {/* </div> */}
       </div>
-      <div className="bg-red mx-auto pt-[1px] lg:mt-0">
+      <div className="bg-slate-200 mx-auto pt-[1px] lg:mt-0">
         <div className="mx-2 md:mx-10">
           <div className="max-w-screen-xl mx-auto flex justify-between items-center">
             {/* <div className="flex w-full justify-between item-center lg:hidden">
@@ -288,12 +292,12 @@ const Header = () => {
                 </Link>
               </ul>
             </div> */}
-            <div className="flex lg:flex hidden lg:inline text-white">
+            <div className="flex lg:flex hidden lg:inline text-black ">
               <button
                 onClick={() => setIsOpen(true)}
-                className="flex items-center bg-white px-3 rounded-t-xl text-black"
+                className="flex items-center bg-red px-3 rounded-t-xl text-white"
               >
-                <ListIcon color="black" style={{ fontSize: "2rem" }}></ListIcon>
+                <ListIcon color="white" style={{ fontSize: "2rem" }}></ListIcon>
                 <p className="ml-2 ">Shop by Categories</p>
               </button>
 
@@ -351,19 +355,19 @@ const Header = () => {
                 )}
               </div>
               <Link href="/">
-                <ul className="menu ml-3">
+                <ul className="menu ml-3  hover:text-red">
                   <li>
                     <p>
-                      <HomeIcon
+                      <RoofingOutlinedIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
-                      ></HomeIcon>{" "}
+                      ></RoofingOutlinedIcon>{" "}
                       Home
                     </p>
                   </li>
                 </ul>
               </Link>
-              <ul className="menu ml-3">
+              <ul className="menu ml-3 hover:text-red">
                 <Link href="/products">
                   <li>
                     <p>
@@ -377,40 +381,40 @@ const Header = () => {
                 </Link>
               </ul>
               <Link href="/categories">
-                <ul className="menu ml-3">
+                <ul className="menu ml-3 hover:text-red">
                   <li>
                     <p>
-                      <LibraryBooksIcon
+                      <CategoryOutlinedIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
-                      ></LibraryBooksIcon>{" "}
+                      ></CategoryOutlinedIcon>{" "}
                       Categories
                     </p>
                   </li>
                 </ul>
               </Link>
-              <ul className="menu ml-3">
+              <ul className="menu ml-3 hover:text-red">
                 <Link href="/orders">
                   <li>
                     <p>
-                      <ShoppingCartIcon
+                      <ShoppingBasketOutlinedIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
-                      ></ShoppingCartIcon>{" "}
+                      ></ShoppingBasketOutlinedIcon>{" "}
                       Orders
                     </p>
                   </li>
                 </Link>
               </ul>
-              <ul className="menu ml-3">
-                <Link href="/how-to-order">
+              <ul className="menu ml-3 hover:text-red">
+                <Link href="/blog">
                   <li>
                     <p>
-                      <LocalShippingIcon
+                      <WidgetsOutlinedIcon
                         color="black"
                         style={{ fontSize: "1.5rem" }}
-                      ></LocalShippingIcon>{" "}
-                      How To Order
+                      ></WidgetsOutlinedIcon>{" "}
+                      BLOG
                     </p>
                   </li>
                 </Link>

@@ -56,7 +56,7 @@ const BlogLayout = () => {
                   </p>
                 </div>
               </div>
-              <Link href="/blog-1" className="no-underline text-black">
+              <Link href="/blog/blog-details" className="no-underline text-black">
                 <h3 className="text-xl font-bold pt-4 hover:text-dark-green">
                   Difference between authorization and authentication..
                 </h3>
@@ -80,7 +80,7 @@ const BlogLayout = () => {
                   </p>
                 </div>
               </div>
-              <Link href="/blog-2" className="no-underline text-black">
+              <Link href="/blog/blog-details" className="no-underline text-black">
                 <h3 className="text-xl font-bold pt-4 hover:text-dark-green">
                   Why are you using firebase? What other options do you have to implement authentication?..
                 </h3>
@@ -104,7 +104,7 @@ const BlogLayout = () => {
                   </p>
                 </div>
               </div>
-              <Link href="/blog-3" className="no-underline text-black">
+              <Link href="/blog/blog-details" className="no-underline text-black">
                 <h3 className="text-xl font-bold pt-4 hover:text-dark-green">
                   What other services does firebase provide other than authentication?..
                 </h3>
@@ -134,7 +134,7 @@ const BlogLayout = () => {
             <h2 className="text-xl font-bold mb-4">Recent Posts</h2>
             <div className="space-y-4">
               {recentPosts.map((post) => (
-                <Link key={post.id} href={`/blog/${post.id}`} className="flex gap-3 group no-underline">
+                <Link key={post.id} href={`/blog/blog-details`} className="flex gap-3 group no-underline">
                   <div className="w-20 h-20 bg-gray-100 rounded-md overflow-hidden shrink-0">
                     <img src={post.image || "/placeholder.svg"} alt="" className="w-full h-full object-cover" />
                   </div>

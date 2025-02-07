@@ -8,10 +8,13 @@ import slidePerViewAuto from "../../styles/custom-swiper/slide-per-view-auto.mod
 import disabledNavigationStyles from "../../styles/custom-swiper/navigation/hide-disabled.module.scss";
 import navigationPositionStyle from "../../styles/custom-swiper/navigation/left-right-zero.module.scss";
 
-export const AllBrand = () => {
+export const AllBrand = ({ dataToBeSent }) => {
+
+  console.log('dataToBeSent.brand_data',dataToBeSent.brand_data);
+  
   return (
     <div className="my-10">
-      <div className="flex">
+      <div className="flex mb-10">
         <p className=" text-[1.5rem] mr-5 font-semibold">Shop By Brand</p>
         <Link href="/categories">
           <button className="bg-red text-white px-3 py-1 text-sm rounded-xl font-semibold">
@@ -42,12 +45,19 @@ export const AllBrand = () => {
             },
           }}
         >
-          <SwiperSlide>
+          {
+            dataToBeSent.brand_data.data.map((data, index)=><SwiperSlide key={index}>
+            <div>
+              <img src={data.image} alt="Brand 1" />
+            </div>
+          </SwiperSlide>)
+          }
+          {/* <SwiperSlide>
             <div>
               <img src="/img/brand/20.webp" alt="Brand 1" />
             </div>
-          </SwiperSlide>
-          <SwiperSlide>
+          </SwiperSlide> */}
+          {/* <SwiperSlide>
             <div>
               <img src="/img/brand/21.webp" alt="Brand 2" />
             </div>
@@ -81,7 +91,7 @@ export const AllBrand = () => {
             <div>
               <img src="/img/brand/23.webp" alt="Brand 6" />
             </div>
-          </SwiperSlide>
+          </SwiperSlide> */}
         </Swiper>
       </div>
     </div>

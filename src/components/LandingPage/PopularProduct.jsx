@@ -5,7 +5,10 @@ import ProductCard from "../Categories/ProductCard";
 import Link from "next/link";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
-export const PopularProduct = () => {
+export const PopularProduct = ({ dataToBeSent}) => {
+
+  console.log('dataToBeSent.product_data', dataToBeSent.product_data.data.length);
+  
   return (
     <div className="my-10">
       <div className="flex mb-10">
@@ -17,14 +20,6 @@ export const PopularProduct = () => {
           </button>
         </Link>
       </div>
-      {/* <div className="grid md:grid-cols-5 grid-cols-3 mx-auto gap-4 my-10">
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-        <ProductCard></ProductCard>
-      </div> */}
 
       <Swiper
  
@@ -47,24 +42,17 @@ export const PopularProduct = () => {
     },
   }}
 >
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
-  <SwiperSlide>
-  <ProductCard></ProductCard>
-  </SwiperSlide>
+{
+  dataToBeSent.product_data.data
+    .filter((data) => data !== undefined && data !== null) // Filter out undefined or null values
+    .map((data) => (
+      <SwiperSlide key={data.id}> 
+        <ProductCard data={data} />
+      </SwiperSlide>
+    ))
+}
+
+
   <SwiperSlide>
   <ProductCard></ProductCard>
   </SwiperSlide>
