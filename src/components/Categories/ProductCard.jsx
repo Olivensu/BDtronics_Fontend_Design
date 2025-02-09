@@ -10,10 +10,9 @@ export default function ProductCard({ data }) {
   const originalPrice = data?.productAttributes?.[0]?.retailPrice ?? 0;
 
   console.log('data olive',data);
-  
 
   return (
-    <div className="group relative w-full max-w-sm overflow-hidden transition-all shadow-lg rounded-xl shadow-gray border-[1px] border-gray-light hover:shadow-xl">
+    <div className="group relative w-full max-w-sm overflow-hidden transition-all shadow-lg rounded-xl shadow-gray border-[1px] border-gray-light hover:shadow-xl my-4">
       <div className="p-0">
         <div className="relative aspect-square">
           <img

@@ -27,7 +27,7 @@ const Home = async () => {
     const data = await GET_GPFI_Revamp({
       URL: Categories_END_POINT,
     });
-    dataToBeSent.brand_data = data.data;
+    dataToBeSent.categories_data = data.data;
   } catch (error) {
     console.log("errors+++++++++++++++++++", error);
   }
@@ -36,7 +36,7 @@ const Home = async () => {
     const data = await GET_GPFI_Revamp({
       URL: Brands_END_POINT,
     });
-    dataToBeSent.categories_data = data.data;
+    dataToBeSent.brand_data = data.data;
   } catch (error) {
     console.log("errors+++++++++++++++++++", error);
   }

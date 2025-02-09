@@ -44,7 +44,7 @@ export const PopularProduct = ({ dataToBeSent}) => {
 >
 {
   dataToBeSent.product_data.data
-    .filter((data) => data !== undefined && data !== null) // Filter out undefined or null values
+    .filter((data) => data !== undefined && data !== null)
     .map((data) => (
       <SwiperSlide key={data.id}> 
         <ProductCard data={data} />
