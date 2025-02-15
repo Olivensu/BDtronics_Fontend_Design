@@ -1,24 +1,206 @@
+"use client";
+import { useState } from "react";
 import Link from "next/link"
 import { Mail, Phone, Clock, Facebook, Youtube, Twitter } from "lucide-react"
 import { HomeIcon, HeartIcon, UserIcon, ShoppingCartIcon } from "lucide-react";
+import { Delete, Edit } from "@mui/icons-material";
+
+import ListIcon from "@mui/icons-material/List";
 
 
 const Footer = () => {
+  const [isOpen, setIsOpen] = useState(false);
+    const [isOpenCart, setIsOpenCart] = useState(false);
   return (
     <div>
       
     <footer className="md:hidden z-20 fixed bottom-4 left-4 right-4 bg-blue rounded-2xl shadow-md shadow-gray">
+    {/* <button
+                onClick={() => setIsOpen(true)}
+                className="flex items-center bg-red px-3 rounded-t-xl text-white"
+              >
+                <ListIcon color="white" style={{ fontSize: "2rem" }}></ListIcon>
+                <p className="ml-2 ">Menu</p>
+              </button> */}
+
+              <div className="relative z-50 text-black">
+                <div
+                  className={`w-full md:w-[400px] fixed top-0 left-0 h-full bg-blue shadow-lg transition-transform duration-300 ${
+                    isOpen ? "translate-x-0" : "-translate-x-full "
+                  }`}
+                  // style={{
+                  //   width: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : "400px",
+                  // }}
+                >
+                  <button
+                    className="btn btn-sm btn-circle bg-red text-white absolute top-4 right-2"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    ✕
+                  </button>
+
+                  <div className="">
+                    <h2 className="font-bold bg-red py-4 pl-5 text-2xl">
+                      Shop by Categories
+                    </h2>
+                    <ul className="menu menu-compact divide-red divide-y-2">
+                      <li>
+                        <Link href="#how-to-order">How to Order</Link>
+                      </li>
+                      <li>
+                        <Link href="#3d-printing">3D Printing Service</Link>
+                      </li>
+                      <li>
+                        <Link href="#solar-calculator">Solar Calculator</Link>
+                      </li>
+                      <li>
+                        <Link href="#blog">Blog</Link>
+                      </li>
+                      <li>
+                        <Link href="#facebook">Facebook Page</Link>
+                      </li>
+                      <li>
+                        <Link href="#youtube">YouTube Channel</Link>
+                      </li>
+                      <li>
+                        <Link href="#contact">Contact</Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                {isOpen && (
+                  <div
+                    className="fixed top-0 left-0 w-full h-full "
+                    onClick={() => setIsOpen(false)}
+                  ></div>
+                )}
+              </div>
+              <div className="z-50 ">
+            <div
+              className={`w-full md:w-[400px] fixed top-0 right-0 h-[100vh] px-5 bg-white shadow-lg transition-transform duration-300 ${
+                isOpenCart ? "translate-x-0" : "translate-x-full"
+              }`}
+              // style={{
+              //   width: typeof window !== "undefined" && window.innerWidth < 768 ? "100%" : "400px",
+              // }}
+            >
+              {/* Close Button */}
+              <button
+                className="bg-red font-bold text-white py-1 px-2 rounded-full absolute top-4 right-4"
+                onClick={() => setIsOpenCart(false)}
+              >
+                ✕
+              </button>
+
+              {/* Drawer Header */}
+              <div className="bg-gray-200 py-4 px-5 border-b">
+                <h2 className="text-2xl font-bold">My Cart</h2>
+              </div>
+
+              {/* Drawer Content with Fixed Footer */}
+              <div className="flex flex-col h-full">
+                {/* Cart Items - Scrollable */}
+                <div className="flex-grow p-5 overflow-y-auto">
+                  {/* Example Cart Item */}
+                  <div className="mb-4 flex items-center">
+                    <img
+                      src="/img/product/14.webp"
+                      alt="Product"
+                      className="w-16 h-16 mr-4"
+                    />
+                    <div>
+                      <h3 className="text-sm font-semibold">
+                        2 x PCF8574 IO Expansion Board (I/O Expander with I2C)
+                      </h3>
+                      <p className="text-sm text-gray-600">PRD-00000018</p>
+                      <p className="text-lg font-bold text-blue-500">
+                        BDT 185.00
+                      </p>
+                      <div className="my-2">
+                      <button className="p-1 bg-yellow rounded-full">
+                        <Edit />
+                      </button>
+                      <button className="p-1 bg-yellow rounded-full ml-3">
+                        <Delete />
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mb-4 flex items-center">
+                    <img
+                      src="/img/product/13.webp"
+                      alt="Product"
+                      className="w-16 h-16 mr-4"
+                    />
+                    <div>
+                      <h3 className="text-sm font-semibold">
+                        2 x WS2812B ARGB LED 5V Programmable Neopixels
+                      </h3>
+                      <p className="text-sm text-gray-600">BTS-00003914</p>
+                      <p className="text-lg font-bold text-blue-500">
+                        BDT 2,408.00
+                      </p>
+                      <div className="my-2">
+                      <button className="p-1 bg-yellow rounded-full">
+                        <Edit />
+                      </button>
+                      <button className="p-1 bg-yellow rounded-full ml-3">
+                        <Delete />
+                      </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Footer - Fixed at Bottom */}
+                <div className="pb-20 border-t">
+                  <div className="flex justify-between items-center mb-4">
+                    <p className="text-lg font-bold">Subtotal:</p>
+                    <p className="text-lg font-bold text-blue-500">
+                      BDT 2,593.00
+                    </p>
+                  </div>
+                  
+                  <button className="btn bg-red text-white w-full mb-2">
+                  <Link href='/checkout'>CHECKOUT</Link>
+                  </button>
+                  
+                  <a
+                    href="/cart"
+                    className="block text-center text-blue-500 underline"
+                  >
+                    View and Edit Cart
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            {/* Overlay */}
+            {isOpenCart && (
+              <div
+                className="fixed top-0 left-0 w-full h-full"
+                onClick={() => setIsOpenCart(false)}
+              ></div>
+            )}
+          </div>
+      
       <nav className="flex justify-around items-center py-2">
         {/* Home Button */}
-        <button className="flex flex-col items-center text-orange-500">
-          <HomeIcon className="w-6 h-6" />
-          <span className="text-xs">Home</span>
+        <button onClick={() => setIsOpen(true)} className="flex flex-col items-center text-orange-500">
+        <ListIcon color="white" style={{ fontSize: "2rem" }}></ListIcon>
+          <span className="text-xs">Menu</span>
         </button>
+        
 
         {/* Wishlist Button */}
         <button className="flex flex-col items-center text-gray-600">
           <HeartIcon className="w-6 h-6" />
           <span className="text-xs">Wishlist</span>
+        </button>
+        <button className="flex flex-col items-center text-orange-500">
+          <HomeIcon className="w-6 h-6" />
+          <span className="text-xs">Home</span>
         </button>
 
         {/* Profile Button */}
@@ -28,7 +210,7 @@ const Footer = () => {
         </button>
 
         {/* Cart Button */}
-        <button className="flex flex-col items-center text-gray-600 relative">
+        <button onClick={() => setIsOpenCart(true)} className="flex flex-col items-center text-gray-600 relative">
           <ShoppingCartIcon className="w-6 h-6" />
           <span className="text-xs">Cart</span>
           <span className="absolute top-0 right-[-12px] bg-purple text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">
