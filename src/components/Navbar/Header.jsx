@@ -10,8 +10,6 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import StorefrontIcon from "@mui/icons-material/Storefront";
 import LibraryBooksIcon from "@mui/icons-material/LibraryBooks";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import EditIcon from "@mui/icons-material/Edit";
-import DeleteIcon from "@mui/icons-material/Delete";
 import Link from "next/link";
 import MailIcon from "@mui/icons-material/Mail";
 import ListIcon from "@mui/icons-material/List";
