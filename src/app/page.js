@@ -52,9 +52,9 @@ const Home = async () => {
 
   return (
     <div className="mx-auto p-5 max-w-[1280px] ">
-      <Banner1 {...{ dataToBeSent }} />
-      <PopularCategories {...{ dataToBeSent }}/>
-      <AllBrand {...{ dataToBeSent }}/>
+      {dataToBeSent.banner_data?<Banner1 {...{ dataToBeSent }} />:<></>}
+      {dataToBeSent.categories_data?<PopularCategories {...{ dataToBeSent }}/>:<></>}
+      {dataToBeSent.brand_data?<AllBrand {...{ dataToBeSent }}/>:<></>}
       <PopularProduct {...{ dataToBeSent }}/>
       <Reviews />
     </div>
