@@ -23,7 +23,7 @@ export const PopularProduct = ({ dataToBeSent}) => {
 
       <Swiper
  
-  navigation={true}
+  // navigation={true}
   loop={false}
   slidesPerView="auto"
   modules={[Navigation]}
@@ -37,7 +37,7 @@ export const PopularProduct = ({ dataToBeSent}) => {
       spaceBetween: 15, 
     },
     1024: {
-      slidesPerView: 6,
+      slidesPerView: 5,
       spaceBetween: 20, 
     },
   }}

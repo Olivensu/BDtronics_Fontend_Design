@@ -32,9 +32,9 @@ const FancySlider = ({banner}) => {
         keyboard={true}
         className="mySwiper w-full shadow-2xl"
       >
-        {banner?.data.map((data,index)=><SwiperSlide key={index}>
+        {banner?.data?banner?.data?.map((data,index)=><SwiperSlide key={index}>
           <img className="w-full h-full" src={data?.image} alt="Slide 1" />
-        </SwiperSlide>)}
+        </SwiperSlide>):<SwiperSlide></SwiperSlide>}
         <SwiperSlide>
           <img className="w-full" src="/img/flash-sale/11.webp" alt="Slide 1" />
         </SwiperSlide>
